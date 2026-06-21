@@ -5,34 +5,37 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Lottie -->
-    <script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.10/dist/dotlottie-wc.js" type="module"></script>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js" type="module"></script>
 </head>
 <body>
 
-<div class="bg-animation">
-    <dotlottie-wc
-        src="https://lottie.host/a8a99279-b688-4c82-815f-b4d23f5442e1/BcOy4nmQa0.lottie"
-        autoplay
-        loop>
-    </dotlottie-wc>
-</div>
-    <div class="container">
-        <div class="upload-card" id="dropZone">
-            <div id="lottie-upload"></div>
+<div class="container">
+    <div class="upload-card" id="dropZone">
+        <!-- Новая Lottie-анимация -->
+        <dotlottie-wc
+            src="https://lottie.host/b5489083-92f5-44aa-82b9-5f31dd657cf1/oJyidUBUJi.lottie"
+            style="width: 300px; height: 300px; margin: 0 auto; display: block;"
+            autoplay
+            loop>
+        </dotlottie-wc>
 
-            <h2>Drop your file</h2>
-            <p>or click to select</p>
+        <h2>Перетащите файл</h2>
+        <p>или кликните для выбора</p>
 
-            <input type="file" id="fileInput" hidden />
+        <input type="file" id="fileInput" hidden />
 
-            <button onclick="uploadFile()">Upload</button>
+        <div id="fileName">Файл не выбран</div>
 
-            <div id="progress"></div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
         </div>
-    </div>
 
-    <script src="script.js"></script>
+        <div id="progressText"></div>
+
+        <button id="uploadBtn">Загрузить</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
