@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Big File Upload</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lottie -->
+    <script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.10/dist/dotlottie-wc.js" type="module"></script>
+</head>
+<body>
+
+<div class="bg-animation">
+    <dotlottie-wc
+        src="https://lottie.host/a8a99279-b688-4c82-815f-b4d23f5442e1/BcOy4nmQa0.lottie"
+        autoplay
+        loop>
+    </dotlottie-wc>
+</div>
+    <div class="container">
+        <div class="upload-card" id="dropZone">
+            <div id="lottie-upload"></div>
+
+            <h2>Drop your file</h2>
+            <p>or click to select</p>
+
+            <input type="file" id="fileInput" hidden />
+
+            <button onclick="uploadFile()">Upload</button>
+
+            <div id="progress"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
